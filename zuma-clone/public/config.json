@@ -1,0 +1,89 @@
+{
+  "game": {
+    "width": 1280,
+    "height": 720,
+    "backgroundColor": "#031034",
+    "timeLimitSec": 180,
+    "finalRushAtSecRemaining": 60,
+    "finalRushSpeedFactor": 1.6
+  },
+  "theme": {
+    "brand": {
+      "red": "#AF1726",
+      "brick": "#9E131F",
+      "yellow": "#FFD633",
+      "darkYellow": "#FFB603",
+      "blue": "#133B9F",
+      "black": "#031034",
+      "white": "#FFFFFF"
+    },
+    "fonts": {
+      "display": "Manrope, Georgia, serif",
+      "body": "Poppins, system-ui, sans-serif"
+    }
+  },
+  "balls": {
+    "radius": 18,
+    "spacing": 36,
+    "colors": [
+      { "id": "emerald",  "hex": "#1F8A55", "sprite": "assets/basic_ball.webp" },
+      { "id": "ruby",     "hex": "#AF1726", "sprite": "assets/red_ball.webp" },
+      { "id": "gold",     "hex": "#FFB603", "sprite": "assets/yellow_ball.webp" },
+      { "id": "sapphire", "hex": "#133B9F", "sprite": "assets/blue_ball.webp" },
+      { "id": "amethyst", "hex": "#6B2DAA", "sprite": "assets/purple_ball.webp" },
+      { "id": "pink",     "hex": "#FF6EC7", "sprite": "assets/pink_ball.webp" }
+    ]
+  },
+  "chain": {
+    "speedPxPerSec": 22,
+    "spawnIntervalMs": 600,
+    "startCount": 12,
+    "speedupEveryMs": 15000,
+    "speedupFactor": 1.08
+  },
+  "shooter": {
+    "x": 640,
+    "y": 360,
+    "sprite": null,
+    "projectileSpeedPxPerSec": 900,
+    "reloadMs": 180,
+    "arrowSpawnRate": 0,
+    "powerupColorId": "pink",
+    "powerupChargesPerMatch": 5,
+    "bombMatchesPerCharge": 3,
+    "bombExplosionCount": 5
+  },
+  "scoring": {
+    "perBallRuby": 0,
+    "comboBonusRuby": 10,
+    "cascadeMultiplier": 1.5,
+    "matchesPerTimeBonus": 10,
+    "timeBonusSec": 1
+  },
+  "path": {
+    "file": "path.json"
+  },
+  "assets": {
+    "background": null,
+    "startBackground": "assets/background_start.webp",
+    "startBackgroundMobile": "assets/background_start_mobile.webp",
+    "logo": "assets/logo.webp",
+    "bombImage": "assets/bomb_ball.webp",
+    "startButton": "assets/Button/start_button.webp"
+  },
+  "audio": {
+    "bgm": "assets/sfx/game_bgm.wav",
+    "ballMerge": "assets/sfx/ball_merge.wav",
+    "ballRelease": "assets/sfx/ball_release.wav",
+    "timeBonus": "assets/sfx/time_bonus.wav",
+    "warningTime": "assets/sfx/warning_time.wav",
+    "bgmVolume": 0.35,
+    "sfxVolume": 0.75
+  },
+  "mobile": {
+    "$note": "Overrides applied when matchMedia('(hover:none) and (pointer:coarse)') matches. Stage path coordinates are auto-scaled from the authored 1280x720 canvas to the mobile dimensions.",
+    "game": { "width": 1024, "height": 576 },
+    "balls": { "radius": 30, "spacing": 64 },
+    "shooter": { "x": 512, "y": 288 }
+  }
+}
