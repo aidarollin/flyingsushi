@@ -1019,6 +1019,7 @@ export class GameScene extends Phaser.Scene {
     this.sound.play('on-hit-2', { volume: 0.5 }); // death sound, kept quieter
 
     this._freezeGameplay();
+    this.pbot.setTexture('pbot-dead');
     this.pbot.body.enable = false;
     this.pbot.setDepth(150);
 
@@ -1183,7 +1184,7 @@ export class GameScene extends Phaser.Scene {
       delay: 55,
       repeat: 7,
       callback: () => {
-        const trail = this.add.image(this.pbot.x, this.pbot.y, 'pbot')
+        const trail = this.add.image(this.pbot.x, this.pbot.y, this.pbot.texture.key)
           .setScale(this.pbot.scaleX)
           .setAngle(this.pbot.angle)
           .setAlpha(0.45)
@@ -1283,6 +1284,7 @@ export class GameScene extends Phaser.Scene {
     if (cause === 'crash') this.sound.play('on-hit-2', { volume: 0.5 });
 
     this._freezeGameplay();
+    this.pbot.setTexture('pbot-dead');
 
     // brief death animation, then go to game over
     this.cameras.main.shake(220, 0.008);

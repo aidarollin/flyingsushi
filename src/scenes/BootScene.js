@@ -11,7 +11,8 @@ export class BootScene extends Phaser.Scene {
 
   preload() {
     // images — WebP (lossless): smaller than PNG, broadly supported
-    this.load.image('pbot',   'assets/sprites/pbot.webp');
+    this.load.image('pbot',      'assets/sprites/pbot.webp');
+    this.load.image('pbot-dead', 'assets/sprites/pbot-dead.webp');
     this.load.image('sushi',   'assets/sprites/sushi.webp');
     this.load.image('logo',   'assets/sprites/game_logo.webp');
     this.load.image('magnet', 'assets/sprites/magnet.webp');
