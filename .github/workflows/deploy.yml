@@ -33,6 +33,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -r index.html README.md src assets bgm sfx _site/
+          touch _site/.nojekyll
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
